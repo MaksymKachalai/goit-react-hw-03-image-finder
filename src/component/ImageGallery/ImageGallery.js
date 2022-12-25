@@ -54,7 +54,7 @@ export class ImageGallery extends Component {
 
 		ImageApi(query, page)
 			.then((images) =>
-				this.setState(({ prevState }) => ({
+				this.setState((prevState) => ({
 					images: [...prevState.images, ...images.hits],
 				}))
 			)
